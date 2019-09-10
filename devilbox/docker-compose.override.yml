@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+  selenium:
+    image: selenium/standalone-chrome
+    links:
+      - bind
+      - php
+      - httpd
+    networks:
+      app_net:
+        ipv4_address: 172.16.238.17
+    extra_hosts:
+      user-inviter.loc:  172.16.238.11
+      docker.for.lin.host.internal: 172.16.238.1
+      docker.for.lin.localhost: 172.16.238.1
