@@ -32,17 +32,19 @@ You need to:
 
 ## Notes
 - the local laravel storage is used. However, the php file functions are not used, only the laravel storage facade, so switchting to AWS S3 or similar would be easy.
+- phpCS and phpmd are included as dependencies for easy usage in a CI pipeline.
 
 ## Tests
 - most user interface parts are tested by Laravel Feature- and Browser-Tests. 
-Run them together using the command ``./run-tets.sh``
+Run them together using the command ``./run-tets.sh`` - include in a future CI pipeline.
+- The tests run against a local sqlite database, and selenium is included in the docker-compose. 
 
 ## Expansion Thoughts
 - Posts are boring text-only plus an image, should add a WSYWIG editor, or expand it with different post types, previews of shared links, etc
 - Of course, a feature to actually make "friends" with any user should be added
 - once we have "friends", we can make a stream of recent content posted by our friends
 - Invitation should be expanded to the likes of Linked In, Facebook, etc, so the user can pick or "invite all", and receiving a notification at those services to join our site. 
-- Actual sending of emails needs implementing.
+- Actual sending of emails needs implementing. Should be done using Laravel Queues.
 - The feature tests could do with some re-factoring, too much copy-paste of setting up tests there.
 - The simple profile view UI could be really made beautiful, with some gallery features, pagination, etc
 - Then, a bigger admin area with statistics on how invitations are going over last days, weeks, months, etc, is missing
