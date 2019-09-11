@@ -30,6 +30,9 @@ You need to:
 - visit ``http://user-inviter.loc`` and log in using `demo@test.com` as user and `secret` as password
   - this is an admin account added by the user seeder
 
+## Notes
+- the local laravel storage is used. However, the php file functions are not used, only the laravel storage facade, so switchting to AWS S3 or similar would be easy.
+
 ## Tests
 - most user interface parts are tested by Laravel Feature- and Browser-Tests. 
 Run them together using the command ``./run-tets.sh``

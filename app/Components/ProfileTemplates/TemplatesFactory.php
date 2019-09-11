@@ -7,6 +7,11 @@ use App\Models\User;
 
 class TemplatesFactory
 {
+    /**
+     * @param User $user
+     * @return SimpleTemplate
+     * @throws InvalidTemplateException
+     */
     public function get(User $user)
     {
         $user->load('profileTemplate');

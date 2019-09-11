@@ -22,6 +22,11 @@ class UsersController extends Controller
             ->with(["input" => request()->all()]);
     }
 
+    /**
+     * @param User $user
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \App\Components\ProfileTemplates\InvalidTemplateException
+     */
     public function details(User $user)
     {
         return $this->profileTemplate->getTemplate($user);

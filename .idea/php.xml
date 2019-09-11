@@ -2,12 +2,12 @@
 <project version="4">
   <component name="MessDetector">
     <phpmd_settings>
-      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/../../../../Shirtigo/code/code-support/vendor/bin/phpmd" />
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/../../../../yourscreen-backend/new/vendor/bin/phpmd" />
     </phpmd_settings>
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <PhpCSConfiguration max_messages_per_file="100" standards="MySource;PEAR;PSR1;PSR12;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../../../Shirtigo/code/code-support/vendor/bin/phpcs" timeout="10000" />
+      <PhpCSConfiguration max_messages_per_file="100" standards="MySource;PEAR;PSR1;PSR12;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../../../yourscreen-backend/new/vendor/bin/phpcs" timeout="10000" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">

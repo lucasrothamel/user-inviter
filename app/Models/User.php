@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\QueryFilters\Email;
 use App\QueryFilters\Name;
-use App\QueryFilters\Sort;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Pipeline\Pipeline;
@@ -45,11 +44,13 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Invitations', 'user_inviting_id', 'id');
     }
 
-    public function profileTemplate() {
+    public function profileTemplate()
+    {
         return $this->hasOne('App\Models\ProfileTemplates', 'id', 'profile_template_id');
     }
 
-    public function posts() {
+    public function posts()
+    {
         return $this->hasMany('App\Models\Posts', 'user_id', 'id')->orderBy('created_at', 'desc');
     }
 
